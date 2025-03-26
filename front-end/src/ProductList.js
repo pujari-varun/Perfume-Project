@@ -13,6 +13,12 @@ function ProductList() {
     }
     fetchProducts();
   },[]);
+
+  const handleBuy = (product) => {
+    alert(`You bought: ${product.name} for $${product.price}`);
+    // Later, you can add cart or checkout logic here
+  };
+  
   return (
     <div className="perfume-products">
       <h1>Perfume Products</h1>
@@ -25,6 +31,12 @@ function ProductList() {
                 <h2>{product.name}</h2> 
                 <p>Price : ${product.price}</p> 
             </Link>
+            <button 
+                className="buy-button" 
+                onClick={() => handleBuy(product)}
+              >
+                Buy
+              </button>
           </div>
         ))
       ) : (

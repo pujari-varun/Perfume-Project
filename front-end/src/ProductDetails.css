@@ -13,7 +13,7 @@
     gap: 80px;
     
 }
-product-details h1{
+.product-details h1{
     font-size:2rem;
     color:#333;
 }
@@ -34,7 +34,7 @@ product-details h1{
     margin:20px;
 }
 
-.product-details button:hover{
+.product-details .backbtn:hover{
     background-color:#0056b3;
 }
 
@@ -43,3 +43,19 @@ product-details h1{
     width:500px;
     border:2px solid black
 }
+
+.buy-button {
+    background-color: #4CAF50;  /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* transition: background 0.3s; */
+    border-radius: 5px;
+  }
+  
+  .buy-button:hover {
+    background-color: #45a049;
+  }

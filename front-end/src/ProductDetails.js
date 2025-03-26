@@ -28,9 +28,16 @@ const ProductDetails=()=>{
         fetchProduct();
     },[id]);
 
+    const handleBuy = (product) => {
+        alert(`You bought: ${product.name} for $${product.price}`);
+        // Later, you can add cart or checkout logic here
+    };
+
     if(loading)return <div>Laoding...</div>
     if(error)return <div>{error}</div>;
     if (!product) return <p>Product not found</p>;
+
+
 
     return (
 <>  
@@ -48,6 +55,12 @@ const ProductDetails=()=>{
             <p><strong>Description : </strong>{product.description}</p>
             <p><strong>Price : </strong>${product.price}</p>
             <p><strong>Stock : </strong>{product.stock}</p>
+            <button 
+                className="buy-button" 
+                onClick={() => handleBuy(product)}
+              >
+                Buy
+            </button>
             </div>
         </div>
         <div className="Othersproducts">
