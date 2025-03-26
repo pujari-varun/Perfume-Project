@@ -1,10 +1,27 @@
 .App {
   text-align: center;
+  font-family : Arial,sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-list{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  gap:25px;
+  margin-top:20px;
+}
+
+.product-card{
+  width:300px;
+  padding:20px;
+  border:1px solid #ccc;
+  box-shadow:0 4px 8px rgba(0,0,0,1);
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.product-card:hover{
+  transform:scale(1.05);
 }
 
 @media (prefers-reduced-motion: no-preference) {
